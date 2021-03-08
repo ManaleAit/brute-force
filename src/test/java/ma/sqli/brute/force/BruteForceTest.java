@@ -54,6 +54,7 @@ public class BruteForceTest {
         app.login("admin", "wrong3");
         String result2 = app.login("admin", "wrong3");
         assertEquals("User or password are incorrect.", result2);
+
         String result3 = app.login("admin", "123");
 
         assertEquals("Welcome admin!", result3);
