@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ma.sqli.brute.force.entity.User;
-import verification.Verification;
+import ma.sqli.brute.force.verification.Verification;
 
 /**
  * @author : El Mahdi Benzekri
@@ -13,20 +13,19 @@ import verification.Verification;
 public class BruteForceApp {
 
 	static List<User> users = new ArrayList<User>();
-
+        private  boolean isLogin=false;
 	public String login(String admin, String password) {
 
 		for (int i = 0; i < users.size(); i++) {
 			if (users.get(i).getLogin().equals(admin) && users.get(i).getPassword().equals(password) ) {
-				users.get(i).setLogin(true);
-
+				isLogin=true;
 				return "Welcome " + admin + "!";
 			}
 			
 		
 		}
 		
-		return Verification.verifyCredential(admin);
+		return Verification.verifyCredential(admin,isLogin);
 	}
 
 	

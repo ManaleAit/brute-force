@@ -5,14 +5,6 @@ public class User {
 	private String login;
 	private String password;
 	private int nbTries;
-	private boolean isLogin=false;
-	
-	public boolean isLogin() {
-		return isLogin;
-	}
-	public void setLogin(boolean isLogin) {
-		this.isLogin = isLogin;
-	}
 	public User(String login, String password) {
 		super();
 		this.login = login;

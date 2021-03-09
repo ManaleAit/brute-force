@@ -1,4 +1,4 @@
-package type;
+package ma.sqli.brute.force.type;
 
 enum MessageEnum {
 
