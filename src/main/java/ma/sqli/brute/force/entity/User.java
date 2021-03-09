@@ -5,6 +5,7 @@ public class User {
 	private String login;
 	private String password;
 	private int nbTries;
+	private boolean isBlacklisted;
 	public User(String login, String password) {
 		super();
 		this.login = login;
@@ -31,7 +32,12 @@ public class User {
 	public void setNbTries(int nbTries) {
 		this.nbTries = nbTries;
 	}
-	
-	
 
+	public boolean isBlacklisted() {
+		return isBlacklisted;
+	}
+
+	public void setBlacklisted(boolean blacklisted) {
+		isBlacklisted = blacklisted;
+	}
 }
